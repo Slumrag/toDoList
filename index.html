@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>To do list</title>
+	<link rel="stylesheet" href="/styles/reset.css">
+	<link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+	<main>
+		<div class="to-do-list">
+			<h1 class="to-do-list__header">To Do List</h1>
+			<div class="to-do-list__body">
+				<div class="to-do-list__input-wrapper">
+					<input class="to-do-list__input" type="text" minlength="1" maxlength="21" value="" placeholder="Type here...">
+					<button class="to-do-list__add-item" value="addItem" title="add item to list"></button>
+				</div>
+				<ul class="to-do-list__items">
+					<li class="to-do-list__item">
+						<button class="to-do-list__complete" value="complete" title="complete item"></button>
+						<p class="to-do-list__text">Text 1</p>
+						<button class="to-do-list__delete" value="delete" title="remove item"></button>
+					</li>
+					<li class="to-do-list__item">
+						<button class="to-do-list__complete" value="complete" title="complete item"></button>
+						<p class="to-do-list__text">Text 1</p>
+						<button class="to-do-list__delete" value="delete" title="remove item"></button>
+					</li>
+
+				</ul>
+				<div class="to-do-list__controls controls">
+					<button class="controls__button" value="even">Highlight even elements</button>
+					<button class="controls__button" value="odd">Highlight odd elements</button>
+					<button class="controls__button" value="removeLast">Remove last element</button>
+					<button class="controls__button" value="removeFirst">Remove first element</button>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
