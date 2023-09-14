@@ -155,3 +155,6 @@ input[type=submit]):hover{
 input[type=submit],input[type=text]):focus{
 	outline: none;
 }
+[popover] {
+	background-color: transparent;
+}

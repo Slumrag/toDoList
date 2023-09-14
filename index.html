@@ -6,26 +6,27 @@
 	<title>To do list</title>
 	<link rel="stylesheet" href="/styles/reset.css">
 	<link rel="stylesheet" href="/styles/style.css">
-	<script src="scripts/ToDoList.js"></script>
-	<script src="scripts/index.js"></script>
+	<script src="scripts/ToDoList.js" defer></script>
+	<script src="scripts/controlsMenu.js" defer></script>
+	<script src="scripts/index.js" defer></script>
 </head>
 <body>
 	<main>
 		<div class="to-do-list">
 			<div class="to-do-list__controls controls">
-				<button class="controls__toggle">=</button>
-				<menu class="controls__menu">
+				<button class="controls__toggle" type="button"></button>
+				<menu class="controls__menu" id="controls-menu" >
 					<li>
-						<button class="controls__button" value="even">Highlight even elements</button>
+						<button class="controls__button" type="menu" value="even">Highlight even elements</button>
 					</li>
 					<li>
-						<button class="controls__button" value="odd">Highlight odd elements</button>
+						<button class="controls__button" type="menu" value="odd">Highlight odd elements</button>
 					</li>
 					<li>
-						<button class="controls__button" value="removeLast">Remove last element</button>
+						<button class="controls__button" type="menu" value="removeLast">Remove last element</button>
 					</li>
 					<li>
-						<button class="controls__button" value="removeFirst">Remove first element</button>
+						<button class="controls__button" type="menu" value="removeFirst">Remove first element</button>
 					</li>
 				</menu>
 			</div>
@@ -33,18 +34,18 @@
 			<div class="to-do-list__body">
 				<div class="to-do-list__input-wrapper">
 					<input class="to-do-list__input" type="text" minlength="1" maxlength="21" value="" placeholder="Type here...">
-					<button class="to-do-list__add-item" value="addItem" title="add item to list"></button>
+					<button class="to-do-list__add-item" type="button" value="addItem" title="add item to list"></button>
 				</div>
 				<ul class="to-do-list__items">
 					<li class="to-do-list__item">
 						<button class="to-do-list__complete" value="complete" title="complete item"></button>
 						<p class="to-do-list__text">Text 1</p>
-						<button class="to-do-list__delete" value="delete" title="remove item"></button>
+						<button class="to-do-list__delete" type="button" value="delete" title="remove item"></button>
 					</li>
 					<li class="to-do-list__item">
 						<button class="to-do-list__complete" value="complete" title="complete item"></button>
 						<p class="to-do-list__text">Text 1</p>
-						<button class="to-do-list__delete" value="delete" title="remove item"></button>
+						<button class="to-do-list__delete" type="button" value="delete" title="remove item"></button>
 					</li>
 
 				</ul>

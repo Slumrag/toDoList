@@ -150,47 +150,53 @@ button:hover{
 }
 .to-do-list__controls {
 	position: relative;
-	align-self: end;
-	/* top: 0;
-	left: -150px; */
+	align-self: flex-start;
 }
+
 .controls{
 	position: relative;
-	/* width: 100%; */
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
 
-}
-.controls__menu {
-	display: none;
-	position: absolute;
-	/* display: flex; */
-	flex-direction: column;
-	width: 150px;
-	/* flex-wrap: wrap; */
-	gap: 10px;
-}
-.controls__toggle{
+.controls__toggle {
 	width: 40px;
 	height: 40px;
-	border-radius:50%;
-	/* border:1px solid var(--text-color); */
-	background: var(--bg-color);
-	transition:  var(--transition200);
+	padding: 10px;
+	border-radius: 50%;
+
+	background: var(--bg-color) no-repeat center/70% url(/assets/icons/align-justify-svgrepo-com.svg);
+	transition: var(--transition200);
 	transition-property: scale, box-shadow;
 	box-shadow: 0 0 10px var(--color-primary);
 }
-.controls__toggle:active{
-	scale:1.1;
 
+.controls__toggle:active {
+	scale: 1.1;
 }
+
+.controls__menu {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	gap: 10px;
+	transform: scaleY(1);
+	transition: transform var(--transition200);
+}
+.controls__menu_hidden{
+	transform: scaleY(0);
+}
+
 .controls__button {
-	max-height: 20px;
+	max-height: max-content;
+	width:max-content;
 	font-size: 10px;
 	background: var(--color-primary);
 	color: #ffffff;
 	padding: 5px;
 	border-radius: 5px;
 	transition: scale var(--transition200);
-	/* font-weight: 600; */
 }
 .controls__button:active{
 	scale: 1.05;
@@ -201,7 +207,6 @@ button:hover{
 .credits {
 	display: flex;
 	gap: 10px;
-	/* margin-top: auto; */
 	justify-content: space-between;
 	min-height: 70px;
 	align-items: center;
