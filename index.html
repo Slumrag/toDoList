@@ -6,10 +6,29 @@
 	<title>To do list</title>
 	<link rel="stylesheet" href="/styles/reset.css">
 	<link rel="stylesheet" href="/styles/style.css">
+	<script src="scripts/ToDoList.js"></script>
+	<script src="scripts/index.js"></script>
 </head>
 <body>
 	<main>
 		<div class="to-do-list">
+			<div class="to-do-list__controls controls">
+				<button class="controls__toggle">=</button>
+				<menu class="controls__menu">
+					<li>
+						<button class="controls__button" value="even">Highlight even elements</button>
+					</li>
+					<li>
+						<button class="controls__button" value="odd">Highlight odd elements</button>
+					</li>
+					<li>
+						<button class="controls__button" value="removeLast">Remove last element</button>
+					</li>
+					<li>
+						<button class="controls__button" value="removeFirst">Remove first element</button>
+					</li>
+				</menu>
+			</div>
 			<h1 class="to-do-list__header">To Do List</h1>
 			<div class="to-do-list__body">
 				<div class="to-do-list__input-wrapper">
@@ -29,14 +48,15 @@
 					</li>
 
 				</ul>
-				<div class="to-do-list__controls controls">
-					<button class="controls__button" value="even">Highlight even elements</button>
-					<button class="controls__button" value="odd">Highlight odd elements</button>
-					<button class="controls__button" value="removeLast">Remove last element</button>
-					<button class="controls__button" value="removeFirst">Remove first element</button>
-				</div>
+
 			</div>
 		</div>
 	</main>
+	<footer class="full-bleed">
+		<div class="wrapper credits">
+			<p class="credits__name">Created By Rautkin Andrey, 2023</p>
+			<a href="https://github.com/Slumrag" target="_blank" class="credits__link">My Github</a>
+		</div>
+	</footer>
 </body>
 </html>
