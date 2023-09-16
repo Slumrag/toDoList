@@ -3,6 +3,7 @@
 	display: flex;
 	align-items: center;
 	gap: 20px;
+	flex: 1;
 }
 
 .controls :focus-visible {
@@ -10,10 +11,11 @@
 }
 
 .controls__toggle {
-	width: 40px;
-	height: 40px;
 	padding: 5px;
 	border-radius: 5px;
+
+	min-width: 40px;
+	min-height: 40px;
 	background:var(--bg-color);
 	transition: var(--transition200);
 	transition-property: scale, box-shadow;
@@ -34,6 +36,8 @@
 
 .controls__menu {
 	display: flex;
+	flex: 1;
+	justify-content: center;
 	flex-wrap: wrap;
 	flex-direction: row;
 	gap: 10px;
@@ -46,13 +50,17 @@
 }
 
 .controls__button {
+	padding: 5px 10px;
+	border-radius: 5px;
+
 	max-height: max-content;
 	width: max-content;
-	font-size: 10px;
+
+	font-size: 0.5rem;
+	font-weight: 600;
+
 	background: var(--color-primary);
 	color: var(--text-color-light);
-	padding: 5px;
-	border-radius: 5px;
 	transition: scale var(--transition200);
 }
 

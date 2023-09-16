@@ -1,4 +1,5 @@
 body {
+	box-sizing:border-box;
 	font-family: 'Roboto', sans-serif;
 	width: 100vw;
 	height: 100vh;
@@ -11,26 +12,24 @@ body {
 
 }
 
-main {
-
-	display: flex;
-	/* align-items: center; */
-	justify-content: center;
-	padding: 50px;
-
+.button{
+	padding: 5px;
+	border-radius: 5px;
 }
+.button:hover {
 
-button:hover {
 	cursor: pointer;
 }
 
 .wrapper {
-	/* box-sizing: content-box; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	padding: 0 10px;
 	max-width: 1200px;
 	width: 100%;
 	margin-left: auto;
-	;
 	margin-right: auto;
 }
 
