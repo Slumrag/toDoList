@@ -1,0 +1,44 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	width: 100vw;
+	height: 100vh;
+	background: var(--color-secondary);
+	color: var(--text-color-dark);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	overflow-x: hidden;
+
+}
+
+main {
+
+	display: flex;
+	/* align-items: center; */
+	justify-content: center;
+	padding: 50px;
+
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+.wrapper {
+	/* box-sizing: content-box; */
+	padding: 0 10px;
+	max-width: 1200px;
+	width: 100%;
+	margin-left: auto;
+	;
+	margin-right: auto;
+}
+
+.full-bleed {
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+}

@@ -1,0 +1,14 @@
+:root {
+	--color-primary: #083D77;
+	--color-secondary: #ffffff;
+
+	--color-delete: #FF101F;
+	--color-disabled: #7fa1c5;
+
+	--bg-color: #C2E5FF;
+	--text-color-dark: #1E1E1F;
+	--text-color-light: #f7fbff;
+
+	--transition200: 200ms ease;
+
+}
