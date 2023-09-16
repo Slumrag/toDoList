@@ -12,13 +12,20 @@
 .controls__toggle {
 	width: 40px;
 	height: 40px;
-	padding: 10px;
-	border-radius: 50%;
-
-	background: var(--bg-color) no-repeat center/70% url(/assets/icons/align-justify-svgrepo-com.svg);
+	padding: 5px;
+	border-radius: 5px;
+	background:var(--bg-color);
 	transition: var(--transition200);
 	transition-property: scale, box-shadow;
 	box-shadow: 0 0 10px var(--color-primary);
+}
+.controls__toggle>svg{
+	object-fit: contain;
+	object-position: center;
+
+}
+.controls__toggle *{
+	stroke: var(--color-primary);
 }
 
 .controls__toggle:active {

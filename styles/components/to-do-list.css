@@ -42,19 +42,24 @@
 .to-do-list__input {
 	outline: none;
 	flex: 1;
-	border-right: 2px solid var(--text-color-dark);
+	border-right: 2px solid var(--color-primary);
 	margin-right: 5px;
 }
 
 .to-do-list__add-item {
 	width: 20px;
 	height: 20px;
-	background: no-repeat center/contain url(/assets/icons/add-svgrepo-com.svg);
 	border-radius: 50%;
 	transition: var(--transition200);
 
 }
-
+.to-do-list__add-item>svg{
+	object-fit: contain;
+	object-position: center;
+}
+.to-do-list__add-item *{
+	stroke: var(--color-primary);
+}
 .to-do-list__add-item:active {
 	scale: 1.2;
 	background-color: #00000020;
