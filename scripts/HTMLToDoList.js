@@ -7,23 +7,31 @@ window.addEventListener('load', (event) => {
 	renderList(list);
 });
 //add item
-document.addEventListener('click', (event) => {
-	if (!event.target.closest('button[value=addItem]')) return;
-	const inputText = document.querySelector('.to-do-list__input');
-	list.add(inputText.value, 'in progress');
-	list.save();
-	const listItem = createListItem(inputText.value);
-	addListItem(list.seed, listItem);
-	// console.log(listItem);
-	inputText.value = '';
-});
+function addToList(target = '', key = 0) {
+	return (event) => {
+		if (!target && !key) return;
+		if (target && !event.target.closest(target)) return;
+		if (key && event.keyCode !== key) return;
+		console.log(event.target, event.keyCode);
+		const inputText = document.querySelector('.to-do-list__input');
+		if (!inputText.value) return;
+		list.add(inputText.value, 'in progress');
+		list.save();
+		const listItem = createListItem(inputText.value);
+		addListItem(list.seed, listItem);
+		inputText.value = '';
+	};
+}
+document.addEventListener('click', addToList('button[value=addItem]'));
+document.querySelector('#list-input-text').addEventListener('keydown', addToList('', 13));
 // delete list item
 document.addEventListener('click', (event) => {
 	if (!event.target.closest('button[value=delete]')) return;
 	const key = +event.target.closest('li').getAttribute('data-key');
 	list.remove(key);
 	list.save();
-	renderList(list);
+	removeListItem(key);
+	// renderList(list);
 });
 // // complete
 document.addEventListener('click', (event) => {
