@@ -1,0 +1,54 @@
+.controls {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.controls :focus-visible {
+	outline: 3px solid var(--text-color-dark);
+}
+
+.controls__toggle {
+	width: 40px;
+	height: 40px;
+	padding: 10px;
+	border-radius: 50%;
+
+	background: var(--bg-color) no-repeat center/70% url(/assets/icons/align-justify-svgrepo-com.svg);
+	transition: var(--transition200);
+	transition-property: scale, box-shadow;
+	box-shadow: 0 0 10px var(--color-primary);
+}
+
+.controls__toggle:active {
+	scale: 1.1;
+}
+
+.controls__menu {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	gap: 10px;
+	transform: scaleY(1);
+	transition: transform var(--transition200);
+}
+
+.controls__menu_hidden {
+	transform: scaleY(0);
+}
+
+.controls__button {
+	max-height: max-content;
+	width: max-content;
+	font-size: 10px;
+	background: var(--color-primary);
+	color: var(--text-color-light);
+	padding: 5px;
+	border-radius: 5px;
+	transition: scale var(--transition200);
+}
+
+.controls__button:active {
+	scale: 1.05;
+}

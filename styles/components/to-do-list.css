@@ -1,0 +1,130 @@
+.to-do-list {
+	max-width: 700px;
+	min-height: 400px;
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+.to-do-list__header {
+	font-weight: bold;
+	font-size: 2rem;
+	text-align: center;
+}
+
+.to-do-list__body {
+	width: 100%;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 10px;
+	background: var(--bg-color);
+	gap: 20px;
+	box-shadow: 0 0 10px var(--color-primary);
+}
+
+.to-do-list__input-wrapper {
+	display: flex;
+	width: 100%;
+	background: var(--color-secondary);
+	padding: 5px 5px 5px 10px;
+	border-radius: 5px;
+}
+
+.to-do-list__input-wrapper:has(.to-do-list__input:focus) {
+	box-shadow: 0 0 10px var(--color-primary);
+}
+
+.to-do-list__input {
+	outline: none;
+	flex: 1;
+	border-right: 2px solid var(--text-color-dark);
+	margin-right: 5px;
+}
+
+.to-do-list__add-item {
+	width: 20px;
+	height: 20px;
+	background: no-repeat center/contain url(/assets/icons/add-svgrepo-com.svg);
+	border-radius: 50%;
+	transition: var(--transition200);
+
+}
+
+.to-do-list__add-item:active {
+	scale: 1.2;
+	background-color: #00000020;
+}
+
+.to-do-list__items {
+	color: var(--color-primary);
+	width: 100%;
+	display: grid;
+	grid-auto-flow: row;
+	grid-template-columns: 1fr;
+	grid-auto-rows: max-content;
+	row-gap: 4px;
+
+}
+
+.to-do-list__item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	row-gap: 4px;
+}
+
+.to-do-list__item-body {
+	padding: 5px;
+	border-radius: 5px;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.to-do-list__item_complete .to-do-list__item-body {
+	background-color: var(--color-disabled);
+	/* color: var(--color-disabled); */
+	text-decoration: line-through;
+}
+
+.to-do-list__text {
+	flex: 1;
+	font-weight: 500;
+}
+
+.to-do-list__complete,
+.to-do-list__delete {
+	height: 20px;
+	width: 20px;
+	transition: var(--transition200);
+}
+
+:is(.to-do-list__complete,
+	.to-do-list__delete)>svg * {
+	stroke: var(--color-primary);
+}
+
+.to-do-list__divider {
+	width: 100%;
+	height: 2px;
+	border-radius: 1px;
+	background: var(--color-primary);
+}
+.to-do-list__item:last-child .to-do-list__divider{
+	background: transparent;
+}
+:is(.to-do-list__complete,
+	.to-do-list__delete):active {
+	scale: 1.2;
+}
+
+.to-do-list__controls {
+	position: relative;
+	align-self: flex-start;
+}

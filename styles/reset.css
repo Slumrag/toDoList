@@ -151,10 +151,12 @@ input {
 input[type=submit]):hover{
 	cursor: pointer;
 }
-:is(button,
-input[type=submit],input[type=text]):focus{
+:is(button,input):focus{
 	outline: none;
 }
 [popover] {
 	background-color: transparent;
+}
+template{
+	display: none;
 }

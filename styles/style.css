@@ -1,13 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+@import url(./components/controls.css);
+@import url(./components/to-do-list.css);
 :root{
 	--color-primary:#083D77;
-	--color-secondary:#EBEBD3;
+	--color-secondary:#ffffff;
 
 	--color-delete:#FF101F;
-	--color-disabled:#8D8D91;
+	--color-disabled:#7fa1c5;
 
 	--bg-color:#C2E5FF;
-	--text-color:#1E1E1F;
+	--text-color-dark:#1E1E1F;
+	--text-color-light:#f7fbff;
 
 	--transition200:200ms ease;
 
@@ -17,11 +20,11 @@ body{
 	width: 100vw;
 	height: 100vh;
 	background: var(--color-secondary);
-	color: var(--text-color);
+	color: var(--text-color-dark);
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	overflow: hidden;
+	overflow-x: hidden;
 
 }
 main{
@@ -51,156 +54,8 @@ button:hover{
 	margin-left: -50vw;
 	margin-right: -50vw;
 }
-.to-do-list {
-	max-width: 700px;
-	min-height: 400px;
-	width: 100%;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 20px;
-}
 
-.to-do-list__header {
-	font-weight: bold;
-	font-size: 2rem;
-	text-align: center;
-}
 
-.to-do-list__body {
-	width: 100%;
-	padding: 20px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	border-radius: 10px;
-	background: var(--bg-color);
-	gap: 20px;
-	box-shadow: 0 0 10px var(--color-primary);
-}
-.to-do-list__input-wrapper {
-	display: flex;
-	width: 100%;
-	background: var(--color-secondary);
-	padding: 5px 5px 5px 10px;
-	border-radius:5px;
-}
-.to-do-list__input-wrapper:has(:focus){
-	box-shadow: 0 0 10px var(--color-primary);
-}
-.to-do-list__input {
-	flex: 1;
-	border-right: 2px solid var(--text-color);
-	margin-right: 5px;
-}
-
-.to-do-list__add-item {
-	width: 20px;
-	height: 20px;
-	background: no-repeat center/contain url(../assets/icons/add-svgrepo-com.svg);
-
-	border-radius:50%;
-
-	transition: var(--transition200);
-
-}
-.to-do-list__add-item:active{
-	scale:1.2;
-	background-color: #00000020;
-}
-.to-do-list__items{
-	width: 100%;
-	display: grid;
-	grid-auto-flow: row;
-	grid-template-columns: 1fr;
-	/* grid-template-rows: 20px; */
-	grid-auto-rows: 35px;
-
-}
-.to-do-list__item {
-	padding:  0 5px;
-	display: flex;
-	gap: 10px;
-	border-bottom: 2px solid var(--text-color);
-	align-items: center;
-	justify-content: space-between;
-}
-
-.to-do-list__text {
-	flex: 1;
-	font-weight: 500;
-}
-.to-do-list__complete,
-.to-do-list__delete {
-	height: 20px;
-	width: 20px;
-	transition: var(--transition200);
-}
-.to-do-list__delete {
-	background: no-repeat center/contain url(/assets/icons/delete-2-svgrepo-com.svg);
-}
-
-.to-do-list__complete {
-	background: no-repeat center/contain url(/assets/icons/check-svgrepo-com.svg);
-}
-:is(.to-do-list__complete,
-.to-do-list__delete):active{
-	scale: 1.2;
-}
-.to-do-list__controls {
-	position: relative;
-	align-self: flex-start;
-}
-
-.controls{
-	position: relative;
-	display: flex;
-	align-items: center;
-	gap: 20px;
-}
-
-.controls__toggle {
-	width: 40px;
-	height: 40px;
-	padding: 10px;
-	border-radius: 50%;
-
-	background: var(--bg-color) no-repeat center/70% url(/assets/icons/align-justify-svgrepo-com.svg);
-	transition: var(--transition200);
-	transition-property: scale, box-shadow;
-	box-shadow: 0 0 10px var(--color-primary);
-}
-
-.controls__toggle:active {
-	scale: 1.1;
-}
-
-.controls__menu {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	gap: 10px;
-	transform: scaleY(1);
-	transition: transform var(--transition200);
-}
-.controls__menu_hidden{
-	transform: scaleY(0);
-}
-
-.controls__button {
-	max-height: max-content;
-	width:max-content;
-	font-size: 10px;
-	background: var(--color-primary);
-	color: #ffffff;
-	padding: 5px;
-	border-radius: 5px;
-	transition: scale var(--transition200);
-}
-.controls__button:active{
-	scale: 1.05;
-}
 .full-bleed:has(.credits){
 		background: var(--bg-color);
 }
@@ -210,9 +65,15 @@ button:hover{
 	justify-content: space-between;
 	min-height: 70px;
 	align-items: center;
+	font-weight: 600;
 
 }
 
-.credits__name {}
+.credits__name {
 
-.credits__link {}
+}
+
+.credits__link {
+	color:inherit;
+	text-decoration: none;
+}
