@@ -68,7 +68,6 @@
 	grid-template-columns: 1fr;
 	grid-auto-rows: max-content;
 	row-gap: 4px;
-
 }
 
 .to-do-list__item {
@@ -85,12 +84,16 @@
 	gap: 10px;
 	align-items: center;
 	justify-content: space-between;
+	transition: var(--transition200);
+	/* transition-property: background, scale; */
 }
 
 .to-do-list__item_complete .to-do-list__item-body {
 	background-color: var(--color-disabled);
-	/* color: var(--color-disabled); */
 	text-decoration: line-through;
+}
+.to-do-list__item_highlight .to-do-list__item-body{
+	background-color: var(--color-secondary);
 }
 
 .to-do-list__text {

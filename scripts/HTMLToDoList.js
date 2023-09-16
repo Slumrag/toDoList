@@ -14,7 +14,7 @@ document.addEventListener('click', (event) => {
 	list.save();
 	const listItem = createListItem(inputText.value);
 	addListItem(list.seed, listItem);
-	console.log(listItem);
+	// console.log(listItem);
 	inputText.value = '';
 });
 // delete list item
@@ -23,9 +23,7 @@ document.addEventListener('click', (event) => {
 	const key = +event.target.closest('li').getAttribute('data-key');
 	list.remove(key);
 	list.save();
-	console.log('before', key, list);
 	renderList(list);
-	console.log('after', key, list);
 });
 // // complete
 document.addEventListener('click', (event) => {
